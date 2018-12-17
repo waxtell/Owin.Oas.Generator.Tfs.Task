@@ -1,0 +1,86 @@
+{
+    "id": "544a7e6e-079f-44ac-a99e-167c4dd27940",
+    "name": "Owin.Oas.Generator.Task",
+    "friendlyName": "Owin.Oas.Generator.Task",
+    "description": "OAS Generator for OWIN hosted APIs",
+    "helpMarkDown": "",
+    "category": "Azure Artifacts",
+    "author": "Will Axtell",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "assembly",
+            "type": "string",
+            "label": "Startup Assembly",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Assembly that contains the Startup class"
+        },
+        {
+            "name": "startup",
+            "type": "string",
+            "label": "Startup Type",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The full name of the Startup type"
+        },
+        {
+            "name": "output",
+            "type": "string",
+            "label": "Output To",
+            "defaultValue": "swagger.json",
+            "required": false,
+            "helpMarkDown": "The file name of the generated OAS"
+        },
+        {
+            "name": "referencepaths",
+            "type": "string",
+            "label": "Reference Paths",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Comma separated paths which will be searched when loading dependencies"
+        },
+        {
+            "name": "route",
+            "type": "string",
+            "label": "Route",
+            "defaultValue": "swagger/docs/v1",
+            "required": false,
+            "helpMarkDown": "Route to retrieve service OAS"
+        },
+        {
+            "name": "base",
+            "type": "string",
+            "label": "API Base",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Service base path (used to resolve physical dependencies)"
+        },
+        {
+            "name": "headers",
+            "type": "string",
+            "label": "Request Headers",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "HTTP headers in the form key:value|key:value"
+        },
+        {
+            "name": "path",
+            "type": "string",
+            "label": "Path to Owin.Oas.Generator.exe",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Optionally supply the path to Owin.Oas.Generator.exe"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}

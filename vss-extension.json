@@ -1,0 +1,34 @@
+{
+    "manifestVersion": 1,
+    "id": "Owin-Oas-Generator-task",
+    "name": "OAS Tools",
+    "version": "0.0.1",
+    "publisher": "WillAxtell",
+    "targets": [
+        {
+            "id": "Microsoft.TeamFoundation.Server"
+        }
+    ],    
+    "description": "Generate OAS file from OWIN hosted API",
+    "categories": "Integrate",
+    "icons": {
+        "default": "images/icon.png"        
+    },
+    "files": [
+        {
+            "path": "buildAndReleaseTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildAndReleaseTask"
+            }
+        }
+    ]
+}
