@@ -1,4 +1,5 @@
 import tl = require('azure-pipelines-task-lib/task');
+import pathLib = require('path');        
 
 async function run() {
     try {
@@ -37,20 +38,21 @@ async function run() {
         }
 
         let exe: string = 'Owin.Oas.Generator.exe';
-        let path: string = tl.getPathInput('path', false, false);
+        let userSpecifiedPath: string = tl.getPathInput('path', false, false);
 
-        if(path != null)
+        if(userSpecifiedPath != null)
         {
-            exe = path+'\\'+exe;
+            exe = pathLib.join(userSpecifiedPath, exe);
         }
         else
         {
-            exe = '.\\Owin.Oas.Generator.1.0.2\\tools\\'+exe;
+            exe = pathLib.join(__dirname, 'Owin.Oas.Generator.1.0.2', 'tools',exe);
         }
 
         tl.execSync(exe, parms )        
     }
-    catch (err) {
+    catch (err) 
+    {
         tl.setResult(tl.TaskResult.Failed, err.message);
     }
 }

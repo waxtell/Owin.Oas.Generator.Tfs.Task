@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "Owin-Oas-Generator-task",
     "name": "OAS Tools",
-    "version": "0.0.1",
+    "version": "0.1.11",
     "publisher": "WillAxtell",
     "targets": [
         {
@@ -12,7 +12,7 @@
     "description": "Generate OAS file from OWIN hosted API",
     "categories": "Integrate",
     "icons": {
-        "default": "images/icon.png"        
+        "default": "images/icon.png"
     },
     "files": [
         {

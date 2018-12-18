@@ -1,17 +1,17 @@
 {
     "id": "544a7e6e-079f-44ac-a99e-167c4dd27940",
     "name": "Owin.Oas.Generator.Task",
-    "friendlyName": "Owin.Oas.Generator.Task",
-    "description": "OAS Generator for OWIN hosted APIs",
+    "friendlyName": "OAS Generator",
+    "description": "OAS Generator for Owin Hosted APIs",
     "helpMarkDown": "",
     "category": "Azure Artifacts",
     "author": "Will Axtell",
     "version": {
         "Major": 0,
         "Minor": 1,
-        "Patch": 0
+        "Patch": 11
     },
-    "instanceNameFormat": "Echo $(samplestring)",
+    "instanceNameFormat": "Generate OAS file",
     "inputs": [
         {
             "name": "assembly",
