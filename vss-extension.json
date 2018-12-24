@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
     "id": "Owin-Oas-Generator-task",
-    "name": "OAS Tools",
-    "version": "0.1.11",
+    "name": "Open API Specification Generator ",
+    "version": "0.1.14",
     "publisher": "WillAxtell",
     "targets": [
         {

@@ -37,17 +37,7 @@ async function run() {
             parms += ' --headers '+headers;
         }
 
-        let exe: string = 'Owin.Oas.Generator.exe';
-        let userSpecifiedPath: string = tl.getPathInput('path', false, false);
-
-        if(userSpecifiedPath != null)
-        {
-            exe = pathLib.join(userSpecifiedPath, exe);
-        }
-        else
-        {
-            exe = pathLib.join(__dirname, 'Owin.Oas.Generator.1.0.2', 'tools',exe);
-        }
+        let exe: string = pathLib.join(__dirname, 'node_modules','.bin', 'owin-oas-generator.cmd');
 
         tl.execSync(exe, parms )        
     }
